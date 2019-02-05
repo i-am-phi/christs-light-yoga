@@ -1,0 +1,49 @@
+// default component for asides
+// in sidebars and footer
+aside {
+
+  padding: 1em;
+  text-align: left;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: left;
+  align-content: center;
+
+  a {
+
+    color: $color-key-darker;
+
+    &:hover {
+      color: $color-key-lighter;
+    }
+  }
+
+  ul {
+    // list-style: none;
+    margin: 0 1em;
+
+    > li {
+      margin: .4em;
+
+      > span {
+        font-size: .75em;
+        font-weight: bold;
+        // margin: 0 .5em;
+        padding: .25em 0 .25em .5em;
+        color: $color-1;
+        // background-color: $color-1;
+      }
+    }
+  }
+
+  p {
+    padding-bottom: .2em;
+  }
+  // for item counts
+
+  // &:last-child {
+  //   // margin-bottom:0;
+  // }
+
+}

@@ -1,0 +1,261 @@
+// @import url('https://fonts.googleapis.com/css?family=Allura|Bellefair|Dancing+Script|Rochester');
+
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush');
+
+$font-EB-Garamond: 'Crimson Text', serif;
+
+$font-display: 'Alex Brush', cursive;
+$font-root: 'Crimson Text', serif;;
+
+$form-font: $font-root;
+
+// COLOR
+$color-key-hue: 44;
+$color-1-hue: 204;
+$color-2-hue: 144;
+
+$saturation: 50;
+
+@import 'color/_default';
+
+$color-foreground: $color-neutral-darker;
+$color-background: #FFF;
+
+@page {
+  margin: 0;
+  size: 8.5in 11in;
+  marks: crop;
+  bleed: .125in;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 11.7pt;
+  background-color: #EEE;
+}
+
+body {
+  font-family: "Crimson Text", serif;
+  background-color: $color-background;
+
+  width: 8.5in;
+  height: 11in;
+  padding: 1em;
+  margin: auto;
+
+  text-align: center;
+  display: grid;
+  grid-template-columns: .618fr 1fr .618fr;
+  grid-template-rows: .618fr 1fr .618fr;
+  /* justify-items: center; */
+  align-items: center;
+}
+
+section, header, footer {
+  /* width: 100%; */
+}
+
+h1 {
+  font-family: 'Alex Brush', cursive;
+}
+
+h1, h2, h3, p {
+  margin-top: .1em;
+  margin-bottom: .1em;
+}
+body > header {
+  font-size: 1.5em;
+  color: $color-key;
+  background-color: $color-key-dark;
+  width: 100%;
+  grid-column: 1 / 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body > header > h1 {
+  font-size: 3.5em;
+  margin: .1em;
+  text-shadow: .05em .05em #000;
+  color: #FFF;
+
+}
+
+.intention {
+  font-size: 1.8em;
+  color: $color-key-dark;
+  grid-column: 3;
+  height: 100%;
+  background-color: $color-key;
+
+}
+
+ul {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: .2em;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+li {
+  margin: .1em;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+
+}
+
+/* li::after {
+  margin: 0;
+  padding: 0;
+  display: block;
+  content: "•";
+}
+li:last-child::after {
+  display: none;
+  content: "";
+} */
+
+
+.schedule {
+  grid-column: 1 / 4;
+  padding: 1em;
+
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(2, 1fr);
+
+  > header {
+    grid-column: 1 / -1;
+    font-size: 2em;
+    line-height: 1.1;
+    > h1 {
+      margin: .1em;
+      line-height: 1;
+    }
+    > h2 {
+      color: #66C;
+      margin: .1em;
+      line-height: 1;
+
+    }
+  }
+
+}
+hr {
+  grid-column: 1 / -1;
+  height: .1em;
+  width: 50%;
+  color: #66C;
+  // grid-column-span: 2;
+  // width: 50%;
+}
+
+article {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  // grid-template-rows: 3em auto;
+  // grid-auto-flow: row;
+  font-size: 1.4em;
+
+  /* grid-template-rows: 8em; */
+  align-items: center;
+  justify-items: center;
+
+  background-image: url('../images/2004-Mandala.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  > object {
+    grid-column: 1 / -1;
+
+    grid-row: 1 / -1;
+    // width: 7em;
+    height: 100%;
+  }
+  > h2 {
+    grid-row: 1;
+    grid-column: 1;
+
+    margin: 0 auto;
+    text-align: center;
+
+  }
+  > h3 {
+    font-family: 'Alex Brush', cursive;
+    font-size: 1.8em;
+    color: #66C;
+    text-shadow: .02em .02em #000;
+
+  }
+
+  &.banner {
+    grid-column: 1 / -1;
+
+    font-size: 2em;
+    > h2 {
+      font-size: 3em;
+    }
+
+  }
+
+}
+
+
+.note {
+  grid-column: 1;
+  color: $color-1-dark;
+  text-align: center;
+  background-color: $color-1;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-evenly;
+
+}
+
+.note > h3 {
+  width: min-content;
+  margin: auto;
+  font-size: 2em;
+}
+
+footer {
+  padding: 1em;
+  grid-column: 2 / -1;
+  background-color: $color-1-dark;
+  color: $color-1;
+
+  height: 100%;
+  font-size: 1.5em;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+footer > h1 {
+  font-size: 3em;
+  line-height: 1;
+  color: #FFF;
+  text-shadow: .05em .05em #000;
+}
+footer > h2 {
+  font-size: 2em;
+  /* line-height: 1; */
+  margin-top: -.1em;
+  color: #FFF;
+  /* text-shadow: .05em .05em #000; */
+}
